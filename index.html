@@ -26,14 +26,16 @@
 <body>
     <header>
         <!-- banner -->
-        <div class="bg-amber-50 flex justify-center gap-9">
+        <div class="bg-amber-50 grid sm:md:grid-cols-1 lg:grid-cols-2 max-w-full lg:px-28">
             <div class="text-center my-auto">
-                <h2 class="font-medium text-3xl">---SALE FEVER---</h2>
-                <h1 class="font-bold text-5xl py-9">Purchase TK 200 or <br>
+                <h2 class="font-normal text-2xl lg:font-medium lg:text-3xl">---SALE FEVER---</h2>
+                <h1 class="font-semibold lg:font-bold text-4xl lg:text-5xl py-9">Purchase TK 200 or <br>
                     above & get <span class="text-pink-500">20% off</span></h1>
                 <div class="flex justify-center gap-3">
-                    <p class="my-auto font-medium text-2xl">Use Promo Code</p>
-                    <p class="p-2 rounded-md text-white bg-pink-500 text-xl font-medium">SELL200</p>
+                    <p class="my-auto font-medium text-xl lg:text-2xl">Use Promo Code</p>
+                    <p
+                        class="sm:md:p-1 lg:p-2 rounded-md text-white bg-pink-500 text-lg lg:text-xl font-normal lg:font-medium">
+                        SELL200</p>
                 </div>
             </div>
             <div>
@@ -46,15 +48,15 @@
         <section>
 
             <!-- shop and cart container -->
-            <div class=" flex justify-center bg-[#F8F8F8] gap-7">
+            <div class="sm:md:flex-row lg:flex justify-center bg-[#F8F8F8] gap-7">
                 <!-- shop container -->
                 <div class="left-side-container">
 
                     <!-- row 1 -->
-                    <h1 class="text-4xl font-semibold py-7">Kitchenware</h1>
-                    <div class="grid grid-cols-3 gap-7 pb-7">
+                    <h1 class="md:text-3xl md:font-medium lg:text-4xl lg:font-semibold py-7">Kitchenware</h1>
+                    <div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 pb-7">
 
-                        <div class="card w-42 bg-base-100 shadow-lg">
+                        <div class="card w-42 bg-base-100 shadow-sm">
                             <figure class="rounded-sm mx-5 my-5 px-5 py-5 bg-[#F8F8F8]">
                                 <img src="/images/prod1.png" alt="" class="rounded-sm" />
                             </figure>
@@ -72,7 +74,7 @@
                         </div>
 
 
-                        <div class="card w-42 bg-base-100 shadow-lg">
+                        <div class="card w-42 bg-base-100 shadow-sm">
                             <figure class="rounded-sm mx-5 my-5 px-5 py-5 bg-[#F8F8F8]">
                                 <img src="/images/prod2.png" alt="" class="rounded-xl" />
                             </figure>
@@ -88,7 +90,8 @@
                                 <p>39.00 TK</p>
                             </div>
                         </div>
-                        <div class="card w-42 bg-base-100 shadow-lg">
+
+                        <div class="card w-42 bg-base-100 shadow-sm">
                             <figure class="rounded-sm mx-5 my-5 px-5 py-5 bg-[#F8F8F8]">
                                 <img src="/images/prod3.png" alt="" class="rounded-xl" />
                             </figure>
@@ -108,10 +111,10 @@
                     </div>
 
                     <!-- row 2 -->
-                    <h1 class="text-4xl font-semibold py-7">Sportswear</h1>
-                    <div class="grid grid-cols-3 gap-7">
+                    <h1 class="md:text-3xl md:font-medium lg:text-4xl lg:font-semibold py-7">Sportswear</h1>
+                    <div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
 
-                        <div class="card w-42 bg-base-100 shadow-lg">
+                        <div class="card w-42 bg-base-100 shadow-sm">
                             <figure class="rounded-sm mx-5 my-5 px-5 py-5 bg-[#F8F8F8]">
                                 <img src="/images/prod4.png" alt="" class="rounded-xl" />
                             </figure>
@@ -128,7 +131,7 @@
                             </div>
                         </div>
 
-                        <div class="card w-42 bg-base-100 shadow-lg">
+                        <div class="card w-42 bg-base-100 shadow-sm">
                             <figure class="rounded-sm mx-5 my-5 px-5 py-5 bg-[#F8F8F8] ">
                                 <img src="/images/prod5.png" alt="" class="rounded-xl" />
                             </figure>
@@ -145,7 +148,7 @@
                             </div>
                         </div>
 
-                        <div class="card w-42 bg-base-100 shadow-lg">
+                        <div class="card w-42 bg-base-100 shadow-sm">
                             <figure class="rounded-sm mx-5 my-5 px-5 py-5 bg-[#F8F8F8]">
                                 <img src="/images/prod6.png" alt="" class="rounded-xl" />
                             </figure>
@@ -166,7 +169,8 @@
 
                 </div>
 
-                <div class="right-side-container col-4 mt-24">
+                <!-- cart -->
+                <div class="right-side-container col-4 sm:w-60 md:w-80 lg:w-auto my-10 lg:mt-24">
                     <div class="bg-base-100 mb-4 p-3 rounded-md">
                         <h4 class="font-medium text-xl">Have A Coupon?</h4>
                         <input id="coupon-input" type="text" class="rounded-md border-2 text-center"
@@ -174,6 +178,7 @@
                         <button disabled id="discount-btn" class="btn btn-secondary text-white">Apply</button>
 
                     </div>
+
 
                     <div class="selected-items bg-base-100 p-3" id="selected-items rounded-md"></div>
                     <div class="cart-box bg-base-100 rounded-md p-3">
