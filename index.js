@@ -3,6 +3,10 @@ const selectedItems = document.querySelector(".selected-items");
 const totalPriceElement = document.getElementById("total");
 const discountElement = document.getElementById("discount");
 const grandTotalElement = document.getElementById("grand-total");
+const purchaseBtn = document.getElementById("purchase-btn");
+const couponInput = document.getElementById("coupon-input");
+const discountBtn = document.getElementById("discount-btn");
+
 let itemNumber = 1;
 let total = 0;
 
@@ -21,5 +25,22 @@ for (const card of cards) {
     const discount = parseFloat(discountElement.textContent);
     const grandTotal = total - discount;
     grandTotalElement.textContent = grandTotal.toFixed(2);
+
+    if (total > 0) {
+      purchaseBtn.removeAttribute("disabled");
+    } else purchaseBtn.setAttribute("disabled", true);
   });
 }
+
+discountBtn.addEventListener("click", function () {
+  const couponCode = couponInput.value;
+  if (couponCode === "SELL200") {
+    const discountAmount = total * 0.2;
+    discountElement.innerText = discountAmount.toFixed(2);
+    grandTotalElement.innerText = (total - discountAmount).toFixed(2);
+  } else {
+    discountElement.innerText = "00";
+    grandTotalElement.innerText = total.toFixed(2);
+  }
+  couponInput.value = "";
+});
