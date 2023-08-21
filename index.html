@@ -44,13 +44,17 @@
     <main>
         <!-- shop -->
         <section>
-            <div class="mx-auto flex justify-center bg-[#F8F8F8]"> <!-- shop and cart container -->
-                <div class=""> <!-- shop container -->
 
-                    <h1 class="text-4xl font-semibold py-7">Kitchenware</h1> <!-- row 1 -->
+            <!-- shop and cart container -->
+            <div class=" flex justify-center bg-[#F8F8F8] gap-7">
+                <!-- shop container -->
+                <div class="left-side-container">
+
+                    <!-- row 1 -->
+                    <h1 class="text-4xl font-semibold py-7">Kitchenware</h1>
                     <div class="grid grid-cols-3 gap-7 pb-7">
 
-                        <div class="card w-56 bg-base-100 shadow-lg">
+                        <div class="card w-42 bg-base-100 shadow-lg">
                             <figure class="rounded-sm mx-5 my-5 px-5 py-5 bg-[#F8F8F8]">
                                 <img src="/images/prod1.png" alt="" class="rounded-sm" />
                             </figure>
@@ -62,13 +66,13 @@
                                 <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
                             </div>
                             <div class="card-body items-center text-center">
-                                <h2 class="card-title">K. Accessories</h2>
+                                <h2 class="card-title">Spoons</h2>
                                 <p>25.00 TK</p>
                             </div>
                         </div>
 
 
-                        <div class="card w-56 bg-base-100 shadow-lg">
+                        <div class="card w-42 bg-base-100 shadow-lg">
                             <figure class="rounded-sm mx-5 my-5 px-5 py-5 bg-[#F8F8F8]">
                                 <img src="/images/prod2.png" alt="" class="rounded-xl" />
                             </figure>
@@ -84,7 +88,7 @@
                                 <p>39.00 TK</p>
                             </div>
                         </div>
-                        <div class="card w-56 bg-base-100 shadow-lg">
+                        <div class="card w-42 bg-base-100 shadow-lg">
                             <figure class="rounded-sm mx-5 my-5 px-5 py-5 bg-[#F8F8F8]">
                                 <img src="/images/prod3.png" alt="" class="rounded-xl" />
                             </figure>
@@ -103,10 +107,11 @@
 
                     </div>
 
-                    <h1 class="text-4xl font-semibold py-7">Sportswear</h1> <!-- row 2 -->
+                    <!-- row 2 -->
+                    <h1 class="text-4xl font-semibold py-7">Sportswear</h1>
                     <div class="grid grid-cols-3 gap-7">
 
-                        <div class="card w-56 bg-base-100 shadow-lg">
+                        <div class="card w-42 bg-base-100 shadow-lg">
                             <figure class="rounded-sm mx-5 my-5 px-5 py-5 bg-[#F8F8F8]">
                                 <img src="/images/prod4.png" alt="" class="rounded-xl" />
                             </figure>
@@ -123,7 +128,7 @@
                             </div>
                         </div>
 
-                        <div class="card w-56 bg-base-100 shadow-lg">
+                        <div class="card w-42 bg-base-100 shadow-lg">
                             <figure class="rounded-sm mx-5 my-5 px-5 py-5 bg-[#F8F8F8] ">
                                 <img src="/images/prod5.png" alt="" class="rounded-xl" />
                             </figure>
@@ -140,7 +145,7 @@
                             </div>
                         </div>
 
-                        <div class="card w-56 bg-base-100 shadow-lg">
+                        <div class="card w-42 bg-base-100 shadow-lg">
                             <figure class="rounded-sm mx-5 my-5 px-5 py-5 bg-[#F8F8F8]">
                                 <img src="/images/prod6.png" alt="" class="rounded-xl" />
                             </figure>
@@ -162,28 +167,27 @@
                 </div>
 
                 <div class="right-side-container col-4 mt-24">
-                    <div class="bg-base-100 mb-4 p-1 rounded-md">
+                    <div class="bg-base-100 mb-4 p-3 rounded-md">
                         <h4 class="font-medium text-xl">Have Coupon?</h4>
                         <input type="text" class="rounded-md border-2 text-center" placeholder="Coupon Code">
                         <button class="btn btn-primary text-white">Apply</button>
 
                     </div>
 
-                    <div class="selected-items bg-base-100" id="selected-items rounded-md"></div>
-                    <div class="cart-box bg-base-100 rounded-md">
+                    <div class="selected-items bg-base-100 p-3" id="selected-items rounded-md"></div>
+                    <div class="cart-box bg-base-100 rounded-md p-3">
                         <hr>
                         <h6>Total Price: <span id="total">00</span></h6>
-                        <h6>Discount:<span>00</span></h6>
+                        <h6>Discount:<span id="discount">00</span></h6>
                         <hr />
-                        <h5>Total: <span>00</span></h5>
+                        <h5>Total: <span id="grand-total">00</span></h5>
                         <button class="btn btn-primary text-white">Make Purchase</button>
                     </div>
-
-                    <div class="coupon"></div>
                 </div>
             </div>
         </section>
     </main>
+    <script src="index.js"></script>
 </body>
 
 </html>
