@@ -171,20 +171,42 @@
                         <h4 class="font-medium text-xl">Have A Coupon?</h4>
                         <input id="coupon-input" type="text" class="rounded-md border-2 text-center"
                             placeholder="Coupon Code">
-                        <button id="discount-btn" class="btn btn-secondary text-white">Apply</button>
+                        <button disabled id="discount-btn" class="btn btn-secondary text-white">Apply</button>
 
                     </div>
 
                     <div class="selected-items bg-base-100 p-3" id="selected-items rounded-md"></div>
                     <div class="cart-box bg-base-100 rounded-md p-3">
                         <hr>
-                        <h6>Total Price: <span id="total">00</span></h6>
-                        <h6>Discount:<span id="discount">00</span></h6>
+                        <h6>Total Price: <span id="total">00</span>TK</h6>
+                        <h6>Discount:<span id="discount">00</span>TK</h6>
                         <hr />
-                        <h5>Total: <span id="grand-total">00</span></h5>
+                        <h5>Total: <span id="grand-total">00</span>TK</h5>
                         <hr>
-                        <button id="purchase-btn" class="btn btn-secondary text-white w-full mt-4">Make
+                        <button disabled onclick="modal1.showModal()" id="purchase-btn"
+                            class="btn btn-secondary text-white w-full mt-4">Make
                             Purchase</button>
+                        <dialog id="modal1" class="modal">
+                            <div class="card bg-base-100  border border-gray-200">
+                                <figure><img class="w-36 pt-8" src="./images/congo.png" alt="" /></figure>
+                                <div class="card-body">
+
+                                    <div class="text-center space-y-4 my-4 w-52 lg:w-96">
+                                        <h4 class="text-xl font-bold">Congratulations</h4>
+                                        <p class="text-base font-medium text-gray-500">You have purchased the products
+                                        </p>
+                                    </div>
+
+                                    <div class="flex mx-auto gap-6">
+                                        <form method="dialog">
+                                            <button id="reset-btn" class="btn btn-secondary">Go
+                                                Home</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </dialog>
                     </div>
                 </div>
             </div>
