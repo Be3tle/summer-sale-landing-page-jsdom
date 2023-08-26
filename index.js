@@ -13,7 +13,7 @@ let total = 0;
 
 for (const card of cards) {
   card.addEventListener("click", function () {
-    const cardTitle = card.querySelector(".card-title").textContent;
+    const cardTitle = card.querySelector(".card-title").innerText;
     const cardPrice = parseFloat(card.querySelector(".card-body p").innerText);
     const selectedItem = document.createElement("div");
     selectedItem.classList.add("selected-item");
@@ -21,11 +21,11 @@ for (const card of cards) {
     itemNumber++;
     selectedItems.appendChild(selectedItem);
     total += cardPrice;
-    totalPriceElement.textContent = total.toFixed(2);
+    totalPriceElement.innerText = total.toFixed(2);
 
-    const discount = parseFloat(discountElement.textContent);
+    const discount = parseFloat(discountElement.innerText);
     const grandTotal = total - discount;
-    grandTotalElement.textContent = grandTotal.toFixed(2);
+    grandTotalElement.innerText = grandTotal.toFixed(2);
 
     if (total > 0) {
       purchaseBtn.removeAttribute("disabled");
